@@ -1,0 +1,1 @@
+console.log("Cartinha animada carregada com sucesso!");
