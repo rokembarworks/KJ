@@ -1,42 +1,121 @@
-body {
-  background: linear-gradient(to right, #ffe6f0, #fff0f5);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Surpresa para Sofia</title>
+  <!-- Fonte estilo Minecraft -->
+  <link href="https://fonts.cdnfonts.com/css/minecraft-4" rel="stylesheet">
 
-.card {
-  background: white;
-  border-radius: 20px;
-  padding: 30px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  max-width: 500px;
-  text-align: center;
-  animation: fadeIn 2s ease-in-out;
-}
+  <style>
+    body {
+      font-family: 'Minecraft', 'Segoe UI', sans-serif;
+      background-image: url('https://static.wikia.nocookie.net/minecraft_gamepedia/images/4/47/Grass_Block.png');
+      background-size: 100px;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
 
-.message {
-  font-size: 18px;
-  margin-top: 20px;
-  color: #333;
-  animation: slideIn 3s ease;
-}
+    .card {
+      background-color: #fff;
+      border: 8px solid #000;
+      image-rendering: pixelated;
+      border-radius: 0;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      padding: 30px;
+      text-align: center;
+      max-width: 600px;
+    }
 
-.assinatura {
-  margin-top: 30px;
-  font-style: italic;
-  color: #b30059;
-}
+    .btn {
+      background-color: #55aa00;
+      border: 4px solid #3d6b00;
+      color: white;
+      font-family: 'Minecraft', sans-serif;
+      padding: 12px 20px;
+      font-size: 16px;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
-}
+    .btn:hover {
+      background-color: #3d6b00;
+    }
 
-@keyframes slideIn {
-  from { transform: translateY(20px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
+    #surpresa, #vale-date, #mensagem-final {
+      display: none;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .pixel-heart {
+      font-size: 28px;
+      margin-top: 20px;
+      color: red;
+    }
+
+    .assinatura {
+      margin-top: 30px;
+      color: #c2185b;
+      font-style: italic;
+    }
+
+    h2, h3, p {
+      font-family: 'Minecraft', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Para Sofia <span class="pixel-heart">❤️</span></h2>
+    <p>
+      não há demonstrações de carinho, que consiga expressar o quanto te amo e o quanto é importante e especial para mim,<br>
+      você vem sendo minha maior certeza dentro de tudo.<br>
+      Te amo muito meu amor
+    </p>
+    <p class="assinatura">&mdash; Com amor, RK</p>
+
+    <button class="btn" onclick="mostrarSurpresa()">Sou a Sofia, quero ver a surpresa!</button>
+
+    <div id="surpresa">
+      <h3>🎉 Clique no botão abaixo para ver seu vale date</h3>
+      <button class="btn" onclick="mostrarValeDate()">Clique aqui para ver sua surpresa</button>
+    </div>
+
+    <div id="vale-date">
+      <h3>🎫 Vale Date Especial</h3>
+      <p>
+        🍿 Um cineminha com pipoca (você escolhe o filme!)<br>
+        🍽️ Um jantar (onde você quiser)<br>
+        🎮 Jogar Minecraft juntos (com direito a shaders, texturas e muitos blocos 💚)
+      </p>
+      <button class="btn" onclick="mostrarMensagemFinal()">Ver mensagem final</button>
+    </div>
+
+    <div id="mensagem-final">
+      <h3>❤️</h3>
+      <p>
+        você faz o dono deste código muito feliz, continue assim que a missão logo será concluída com sucesso!
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function mostrarSurpresa() {
+      document.getElementById("surpresa").style.display = "block";
+    }
+    function mostrarValeDate() {
+      document.getElementById("vale-date").style.display = "block";
+    }
+    function mostrarMensagemFinal() {
+      document.getElementById("mensagem-final").style.display = "block";
+    }
+  </script>
+</body>
+</html>
