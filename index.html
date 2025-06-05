@@ -3,15 +3,101 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Para Sofia 💖</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Surpresa para Sofia</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fae5f2;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+    .card {
+      background-color: #fff;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      padding: 30px;
+      text-align: center;
+      max-width: 600px;
+    }
+    .btn {
+      background-color: #7ed957;
+      border: none;
+      color: white;
+      padding: 12px 20px;
+      font-size: 16px;
+      margin-top: 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #6cc24a;
+    }
+    #surpresa, #vale-date, #mensagem-final {
+      display: none;
+      margin-top: 20px;
+      text-align: center;
+    }
+    .pixel-heart {
+      font-size: 28px;
+      margin-top: 20px;
+    }
+    .assinatura {
+      margin-top: 30px;
+      color: #c2185b;
+      font-style: italic;
+    }
+  </style>
 </head>
 <body>
   <div class="card">
-    <h1>Para Sofia 💌</h1>
-    <p class="message">não há demonstrações de carinho, que consiga expressar o quanto te amo e o quanto é importante e especial para mim, você vem sendo minha maior certeza dentre de tudo. Te amo muito meu amor</p>
-    <p class="assinatura">– Com amor, RK</p>
+    <h2>Para Sofia <span class="pixel-heart">💌</span></h2>
+    <p>
+      não há demonstrações de carinho, que consiga expressar o quanto te amo e o quanto é importante e especial para mim,<br>
+      você vem sendo minha maior certeza dentro de tudo.<br>
+      Te amo muito meu amor
+    </p>
+    <p class="assinatura">&mdash; Com amor, RK</p>
+    <button class="btn" onclick="mostrarSurpresa()">Sou a Sofia, quero ver a surpresa!</button>
+    
+    <div id="surpresa">
+      <h3>🎉 Clique no botão abaixo para ver seu vale date</h3>
+      <button class="btn" onclick="mostrarValeDate()">Clique aqui para ver sua surpresa</button>
+    </div>
+
+    <div id="vale-date">
+      <h3>🎫 Vale Date Especial</h3>
+      <p>
+        🍿 Um cineminha com pipoca (você escolhe o filme!)<br>
+        🍽️ Um jantar (onde você quiser)<br>
+        🎮 Jogar Minecraft juntos (com direito a shaders, texturas e muitos blocos 💚)
+      </p>
+      <button class="btn" onclick="mostrarMensagemFinal()">Ver mensagem final</button>
+    </div>
+
+    <div id="mensagem-final">
+      <h3>❤️</h3>
+      <p>
+        você faz o dono deste código muito feliz, continue assim que a missão logo será concluída com sucesso!
+      </p>
+    </div>
   </div>
-  <script src="script.js"></script>
+
+  <script>
+    function mostrarSurpresa() {
+      document.getElementById("surpresa").style.display = "block";
+    }
+    function mostrarValeDate() {
+      document.getElementById("vale-date").style.display = "block";
+    }
+    function mostrarMensagemFinal() {
+      document.getElementById("mensagem-final").style.display = "block";
+    }
+  </script>
 </body>
 </html>
